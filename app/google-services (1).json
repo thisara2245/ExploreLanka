@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "367316542686",
+    "project_id": "explorelanka-48bab",
+    "storage_bucket": "explorelanka-48bab.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367316542686:android:4abc84e99c50a628508e4f",
+        "android_client_info": {
+          "package_name": "com.example.explorelanka"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA72G7CWmLweoY_aCvXTY3XkLpprBUSasY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
