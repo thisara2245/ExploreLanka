@@ -168,11 +168,12 @@
             android:layout_weight="1" />
 
         <TextView
+            android:id="@+id/viewall"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="24dp"
             android:clickable="true"
             android:text="View all"
-            android:textColor="#888888"
+            android:textColor="#1730BA"
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -827,7 +828,7 @@
                         android:layout_marginTop="24dp"
                         android:contentDescription="Destination Image"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/colombo"
+                        android:src="@drawable/jaffna2"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
@@ -848,7 +849,7 @@
                         android:id="@+id/destinationName5"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Colombo"
+                        android:text="Jaffna"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"
                         android:textStyle="bold"
@@ -908,7 +909,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginStart="4dp"
-                            android:text="Colombo Sri Lanka"
+                            android:text="Jaffna Sri Lanka"
                             android:textColor="#888888"
                             android:textSize="12sp" />
                     </LinearLayout>
