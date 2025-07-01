@@ -68,7 +68,7 @@ class LoginActivity : AppCompatActivity() {
 
         // Forgot Password text
         tvForgotPassword.setOnClickListener {
-            showForgotPasswordDialog()
+            startActivity(Intent(this, ForgotPasswordActivity::class.java))
         }
     }
 
@@ -90,33 +90,5 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
-    // Reset password dialog
-    private fun showForgotPasswordDialog() {
-        val builder = AlertDialog.Builder(this)
-        builder.setTitle("Reset Password")
 
-        val input = EditText(this)
-        input.hint = "Enter your email"
-        input.inputType = InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS
-        builder.setView(input)
-
-        builder.setPositiveButton("Send") { _, _ ->
-            val email = input.text.toString().trim()
-            if (email.isNotEmpty()) {
-                auth.sendPasswordResetEmail(email)
-                    .addOnCompleteListener { task ->
-                        if (task.isSuccessful) {
-                            Toast.makeText(this, "Check your email for reset link", Toast.LENGTH_LONG).show()
-                        } else {
-                            Toast.makeText(this, "Error: ${task.exception?.message}", Toast.LENGTH_LONG).show()
-                        }
-                    }
-            } else {
-                Toast.makeText(this, "Email is required", Toast.LENGTH_SHORT).show()
-            }
-        }
-
-        builder.setNegativeButton("Cancel", null)
-        builder.show()
-    }
 }
