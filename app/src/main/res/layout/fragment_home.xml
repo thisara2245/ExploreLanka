@@ -39,7 +39,7 @@
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/profile_image"
+                    android:src="@drawable/thisara"
                     android:contentDescription="User Avatar" />
 
                 <TextView

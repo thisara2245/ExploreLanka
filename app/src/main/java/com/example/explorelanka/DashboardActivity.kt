@@ -1,5 +1,7 @@
 package com.example.explorelanka
 
+
+import ProfileFragment
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +22,14 @@ class DashboardActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.nav_home -> {
                     replaceFragment(HomeFragment())
+                    true
+                }
+                R.id.nav_favourite -> {
+                    replaceFragment(FavoriteFragment())
+                    true
+                }
+                R.id.nav_profile -> {
+                    replaceFragment(ProfileFragment())
                     true
                 }
 
