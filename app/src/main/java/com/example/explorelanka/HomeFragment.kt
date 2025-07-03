@@ -1,5 +1,6 @@
 package com.example.explorelanka
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -25,11 +26,12 @@ class HomeFragment : Fragment() {
 
         // Set click listener
         viewAllTextView.setOnClickListener {
-
-            Toast.makeText(requireContext(), "View all clicked", Toast.LENGTH_SHORT).show()
-
-
+            val intent = Intent(requireContext(), DestinationsActivity::class.java)
+            startActivity(intent)
         }
+
+
+
 
         return view
     }
