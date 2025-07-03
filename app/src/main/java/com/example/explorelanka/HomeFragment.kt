@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.cardview.widget.CardView
 
 class HomeFragment : Fragment() {
 
@@ -29,7 +30,11 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), DestinationsActivity::class.java)
             startActivity(intent)
         }
-
+        val kandyCard = view.findViewById<CardView>(R.id.kandy)
+        kandyCard.setOnClickListener {
+            val intent = Intent(requireContext(), ViewActivity::class.java)
+            startActivity(intent)
+        }
 
 
 
