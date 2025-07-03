@@ -32,6 +32,10 @@ class DashboardActivity : AppCompatActivity() {
                     replaceFragment(ProfileFragment())
                     true
                 }
+                R.id.nav_plantrip -> {
+                    replaceFragment(TripPlannerFragment())
+                    true
+                }
 
 
                 else -> false

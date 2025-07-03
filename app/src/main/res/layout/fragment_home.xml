@@ -199,8 +199,10 @@
             <!-- Destination Card 1 (Example) -->
             <androidx.cardview.widget.CardView
                 android:layout_width="220dp"
+                android:id="@+id/kandy"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
+                android:clickable="true"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="4dp"
                 app:cardBackgroundColor="@android:color/white">

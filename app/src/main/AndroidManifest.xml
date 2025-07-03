@@ -40,6 +40,8 @@
             android:exported="false" />
         <activity android:name=".DestinationsActivity" />
 
+        <activity android:name=".ViewActivity" />
+
 
 
     </application>
