@@ -170,11 +170,14 @@
         <TextView
             android:id="@+id/viewall"
             android:layout_width="wrap_content"
-            android:layout_height="24dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#B41313"
+            android:textColor="@color/blue"
             android:clickable="true"
-            android:text="View all"
-            android:textColor="#1730BA"
-            android:textSize="14sp" />
+            android:focusable="true"
+            android:text="View All"
+            android:textSize="14sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <HorizontalScrollView
@@ -212,12 +215,12 @@
                         android:id="@+id/destinationImage1"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
-                        android:layout_marginTop="24dp"
+                        android:layout_marginTop="36dp"
                         android:contentDescription="Destination Image"
                         android:scaleType="centerCrop"
                         android:src="@drawable/kandy1"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -368,12 +371,12 @@
                         android:id="@+id/destinationImage2"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="36dp"
                         android:contentDescription="Destination Image"
                         android:scaleType="centerCrop"
                         android:src="@drawable/nuwaraeliya2"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
