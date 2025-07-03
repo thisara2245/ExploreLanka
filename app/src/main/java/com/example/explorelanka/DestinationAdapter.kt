@@ -1,13 +1,19 @@
 package com.example.explorelanka
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
-class DestinationAdapter(private val destinationList: List<Destination>) : RecyclerView.Adapter<DestinationAdapter.JobViewHolder>() {
+
+class DestinationAdapter(
+    private val context: Context,
+    private val destinationList: List<Destination>
+) : RecyclerView.Adapter<DestinationAdapter.JobViewHolder>() {
 
     class JobViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val jobIcon: ImageView = itemView.findViewById(R.id.jobIcon)
@@ -25,15 +31,17 @@ class DestinationAdapter(private val destinationList: List<Destination>) : Recyc
 
     override fun onBindViewHolder(holder: JobViewHolder, position: Int) {
         val job = destinationList[position]
-        
+
         holder.jobIcon.setImageResource(job.iconResId)
         holder.jobTitle.text = job.title
         holder.jobType.text = job.type
         holder.jobSalary.text = job.salary
         holder.jobLocation.text = job.location
-        
+
+        // ⭐ Bookmark icon click adds to FavoriteManager
         holder.bookmarkIcon.setOnClickListener {
-            // Handle bookmark click
+            FavoriteManager.addToFavorites(job)
+            Toast.makeText(context, "${job.title} added to favorites", Toast.LENGTH_SHORT).show()
         }
     }
 

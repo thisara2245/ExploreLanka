@@ -23,7 +23,8 @@ class DestinationsActivity : AppCompatActivity() {
             Destination("Colombo", "Fulltime", "8k-13k", "Kurunegala", R.drawable.colombo)
         )
 
-        val adapter = DestinationAdapter(jobs)
+        val adapter = DestinationAdapter(this, jobs)
+
         recyclerView.adapter = adapter
     }
 }
