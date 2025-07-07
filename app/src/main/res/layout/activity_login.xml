@@ -11,10 +11,9 @@
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/logo"
-        android:contentDescription="App Logo"
         android:layout_marginBottom="16dp"
-        />
+        android:contentDescription="App Logo"
+        android:src="@drawable/logor" />
 
     <TextView
         android:layout_width="wrap_content"

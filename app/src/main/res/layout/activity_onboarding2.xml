@@ -43,6 +43,7 @@
             android:gravity="center"
             android:layout_marginTop="8dp" />
 
+
         <Button
             android:id="@+id/buttonGetStarted"
             android:layout_width="match_parent"
