@@ -13,6 +13,15 @@
 
         <!-- Starting Location Dropdown -->
 
+
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="13dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -20,7 +29,8 @@
             android:gravity="clip_horizontal|center_horizontal"
             android:text="Trip Planner"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
 
         <TextView
             android:text="Starting Location"
@@ -32,13 +42,18 @@
             android:layout_height="wrap_content" />
 
         <!-- OR Select via Map -->
-        <Button
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSelectFromMap"
-            android:text="Select from Map"
-            android:layout_marginTop="8dp"
-            android:background="@color/blue"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Select from Map"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:backgroundTint="@color/blue"
+            android:padding="16dp"
+            android:layout_marginBottom="32dp"
+             />
 
         <!-- Travel Date -->
         <TextView
@@ -92,13 +107,17 @@
             android:layout_height="wrap_content" />
 
         <!-- Submit Button -->
-        <Button
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnFindDestinations"
-            android:text="Find Destinations"
-            android:background="#003366"
-            android:textColor="#FFFFFF"
-            android:layout_marginTop="24dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Find Destinations"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:backgroundTint="@color/blue"
+            android:padding="16dp"
+            android:layout_marginBottom="32dp"
+             />
     </LinearLayout>
 </ScrollView>

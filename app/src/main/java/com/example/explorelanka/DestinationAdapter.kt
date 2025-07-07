@@ -15,6 +15,8 @@ class DestinationAdapter(
     private val destinationList: List<Destination>
 ) : RecyclerView.Adapter<DestinationAdapter.JobViewHolder>() {
 
+    private var filteredList: MutableList<Destination> = destinationList.toMutableList()
+
     class JobViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val jobIcon: ImageView = itemView.findViewById(R.id.jobIcon)
         val jobTitle: TextView = itemView.findViewById(R.id.jobTitle)
@@ -30,7 +32,7 @@ class DestinationAdapter(
     }
 
     override fun onBindViewHolder(holder: JobViewHolder, position: Int) {
-        val job = destinationList[position]
+        val job = filteredList[position]
 
         holder.jobIcon.setImageResource(job.iconResId)
         holder.jobTitle.text = job.title
@@ -38,12 +40,25 @@ class DestinationAdapter(
         holder.jobSalary.text = job.salary
         holder.jobLocation.text = job.location
 
-        // ⭐ Bookmark icon click adds to FavoriteManager
         holder.bookmarkIcon.setOnClickListener {
             FavoriteManager.addToFavorites(job)
             Toast.makeText(context, "${job.title} added to favorites", Toast.LENGTH_SHORT).show()
         }
     }
 
-    override fun getItemCount(): Int = destinationList.size
+    override fun getItemCount(): Int = filteredList.size
+
+    // ✅ Filter method
+    fun filter(query: String) {
+        filteredList = if (query.isEmpty()) {
+            destinationList.toMutableList()
+        } else {
+            destinationList.filter {
+                it.title.contains(query, ignoreCase = true) ||
+                        it.location.contains(query, ignoreCase = true) ||
+                        it.type.contains(query, ignoreCase = true)
+            }.toMutableList()
+        }
+        notifyDataSetChanged()
+    }
 }
