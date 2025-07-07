@@ -42,6 +42,10 @@
 
         <activity android:name=".ViewActivity" />
 
+        <activity android:name=".OnboardingActivity" />
+
+        <activity android:name=".OnboardingActivity2" />
+
 
 
     </application>

@@ -4,10 +4,10 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-06-20T17:08:29.824433800Z">
+        <DropdownSelection timestamp="2025-07-04T05:17:17.754454300Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\Lenovo\.android\avd\Pixel_8a_API_36.avd" />
+              <DeviceId pluginId="PhysicalDevice" identifier="serial=RF8MA1X014J" />
             </handle>
           </Target>
         </DropdownSelection>

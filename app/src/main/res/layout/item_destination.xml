@@ -40,7 +40,7 @@
                 android:id="@+id/jobType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fulltime"
+                android:text="kandy"
                 android:textSize="12sp"
                 android:background="@drawable/job_type_background"
                 android:padding="4dp"
@@ -71,9 +71,9 @@
 
     <ImageView
         android:id="@+id/bookmarkIcon"
-        android:layout_width="20dp"
-        android:layout_height="28dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:src="@drawable/apply" />
+        android:src="@drawable/icon_heart" />
 
 </LinearLayout>
