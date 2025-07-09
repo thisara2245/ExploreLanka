@@ -1,157 +1,77 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="#FFFFFF">
+    android:layout_height="match_parent">
+
+    <!-- Blue Header Box -->
+
+    <!-- Scrollable Options Overlay -->
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:background="@color/blue"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/textprofile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"
+            android:text="Profile"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/profile_circle_bg"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/thisara" />
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Thisara Shalitha"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="280dp"
+    android:background="#F6F6F6">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center_horizontal">
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="25dp"/>
+        android:padding="16dp">
 
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Profile"
-            android:textSize="28dp"
-            android:gravity="center"
-            android:textStyle="bold"/>
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="13dp"/>
-        <!-- Profile Image -->
-        <ImageView
-            android:id="@+id/imgProfile"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/thisara"
-            android:layout_marginTop="24dp"/>
-
-
-        <!-- Name -->
-        <TextView
-            android:id="@+id/txtName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Thisara"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginTop="12dp" />
-
-        <!-- Email -->
-        <TextView
-            android:id="@+id/txtEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Thisara@gmail.com"
-            android:textColor="#888888"
-            android:layout_marginTop="4dp" />
-
-        <!-- Stats (Reward Points | Trips | Bucket List) -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="24dp"
-            android:gravity="center"
-            android:weightSum="3">
-
-            <LinearLayout
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content">
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content">
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content">
-
-
-            </LinearLayout>
-        </LinearLayout>
-
-        <!-- Options Section -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="402dp"
+            android:background="@android:color/white"
+            android:elevation="2dp"
             android:orientation="vertical"
-            android:layout_marginTop="32dp">
+            android:padding="8dp">
 
-            <!-- Profile -->
-            <TextView
-                android:id="@+id/optionProfile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Profile"
-                android:padding="16dp"
-                android:textSize="16sp"
-                android:textColor="#000000"
-                android:background="?android:attr/selectableItemBackground" />
 
-            <!-- Bookmarked -->
-            <TextView
-                android:id="@+id/optionBookmarked"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Bookmarked"
-                android:padding="16dp"
-                android:textSize="16sp"
-                android:textColor="#000000"
-                android:background="?android:attr/selectableItemBackground" />
-
-            <!-- Settings -->
-            <TextView
-                android:id="@+id/optionSettings"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Settings"
-                android:padding="16dp"
-                android:textSize="16sp"
-                android:textColor="#000000"
-                android:background="?android:attr/selectableItemBackground" />
-
-            <!-- Version -->
-            <TextView
-                android:id="@+id/optionVersion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Version 1.0"
-                android:padding="16dp"
-                android:textSize="16sp"
-                android:textColor="#888888"
-                android:background="?android:attr/selectableItemBackground" />
+            <include layout="@layout/item_profile_option" />
         </LinearLayout>
-
 
     </LinearLayout>
 </ScrollView>
+
+    </FrameLayout>
