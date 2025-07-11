@@ -43,12 +43,13 @@
                     android:contentDescription="User Avatar" />
 
                 <TextView
+                    android:id="@+id/homeUserName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Thisara"
+                    android:text="User"
                     android:textColor="@android:color/black"
-                    android:textSize="14sp"
-                    android:layout_marginStart="8dp" />
+                    android:textSize="14sp"/>
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -60,10 +61,12 @@
 
         <!-- Notification Icon -->
         <ImageView
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:src="@drawable/ic_bell_notification"
+            android:id="@+id/btnnotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
             android:contentDescription="Notifications"
+            android:src="@drawable/ic_bell_notification"
             app:tint="#616161" />
 
     </LinearLayout>
@@ -969,5 +972,6 @@
             <!-- Add more cards here if needed -->
         </LinearLayout>
     </HorizontalScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

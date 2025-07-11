@@ -46,7 +46,11 @@
 
         <activity android:name=".OnboardingActivity2" />
 
-        <activity android:name=".EditProfileActivity" />" />
+        <activity android:name=".NotificationsActivity" />
+
+        <activity android:name=".EditProfileActivity" />
+        "
+        />
 
 
 
