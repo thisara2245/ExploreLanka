@@ -1,9 +1,8 @@
-package com.example.explorelanka
-
 data class Destination(
-        val title: String,
-        val type: String,
-        val salary: String,
-        val location: String,
-        val iconResId: Int
+        var id: String = "",
+        var title: String = "",
+        var type: String = "",
+        var description: String = "",
+        var location: String = "",
+        var imageResId: Int = 0 // Drawable resource ID
 )

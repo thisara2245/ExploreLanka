@@ -1,11 +1,12 @@
 package com.example.explorelanka
 
+
+import Destination
 import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -23,22 +24,42 @@ class DestinationsActivity : AppCompatActivity() {
         backButton = findViewById(R.id.btnBack1)
         recyclerView = findViewById(R.id.recyclerViewJobs)
         searchBar = findViewById(R.id.searchBar)
-
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val jobs = listOf(
-            Destination("Kandy", "Fulltime", "20k-30k", "Colombo", R.drawable.kandy1),
-            Destination("Matara", "Part time", "18k-35k", "Colombo", R.drawable.matara1),
-            Destination("Anuradhapura", "Part time", "8k-12k", "Galle", R.drawable.anuradapura3),
-            Destination("Jaffna", "Fulltime", "10k-12k", "Matara", R.drawable.jaffna2),
-            Destination("NuwaraEliya", "Fulltime", "8k-13k", "Kurunegala", R.drawable.nuwaraeliya2),
-            Destination("Colombo", "Fulltime", "8k-13k", "Kurunegala", R.drawable.colombo)
+        val destinations = listOf(
+            Destination("1", "Kandy", "Fulltime", "20k-30k", "Colombo", R.drawable.kandy1),
+            Destination("2", "Matara", "Part time", "18k-35k", "Colombo", R.drawable.matara1),
+            Destination(
+                "3",
+                "Anuradhapura",
+                "Part time",
+                "8k-12k",
+                "Galle",
+                R.drawable.anuradapura3
+            ),
+            Destination("4", "Jaffna", "Fulltime", "10k-12k", "Matara", R.drawable.jaffna2),
+            Destination(
+                "5",
+                "NuwaraEliya",
+                "Fulltime",
+                "8k-13k",
+                "Kurunegala",
+                R.drawable.nuwaraeliya2
+            ),
+            Destination("6", "Colombo", "Fulltime", "8k-13k", "Kurunegala", R.drawable.colombo)
         )
 
-        adapter = DestinationAdapter(this, jobs)
+        // ✅ Initialize adapter first
+        val adapter = DestinationAdapter(this, destinations) { selectedDestination ->
+
+            // Open LocationActivity and pass only the destination name
+            val intent = Intent(this, LocationActivity::class.java)
+            intent.putExtra("destination_name", selectedDestination.title) // e.g., "Matara"
+            startActivity(intent)
+        }
         recyclerView.adapter = adapter
 
-        // ✅ Filter on text change
+        // ✅ Then add the filter (after adapter is not null)
         searchBar.addTextChangedListener(object : android.text.TextWatcher {
             override fun afterTextChanged(s: android.text.Editable?) {}
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}

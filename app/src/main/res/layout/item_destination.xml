@@ -9,7 +9,7 @@
     android:gravity="center_vertical">
 
     <ImageView
-        android:id="@+id/jobIcon"
+        android:id="@+id/destinationIcon"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:src="@drawable/card_profile"
@@ -22,7 +22,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/jobTitle"
+            android:id="@+id/destinationTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Project Manager"
@@ -37,7 +37,7 @@
             android:layout_marginTop="4dp">
 
             <TextView
-                android:id="@+id/jobType"
+                android:id="@+id/destinationType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="kandy"
@@ -47,7 +47,7 @@
                 android:layout_marginEnd="8dp" />
 
             <TextView
-                android:id="@+id/jobSalary"
+                android:id="@+id/destinationDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="20k-30k"
@@ -57,7 +57,7 @@
                 android:layout_marginEnd="8dp" />
 
             <TextView
-                android:id="@+id/jobLocation"
+                android:id="@+id/destinationLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Colombo"
