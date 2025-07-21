@@ -27,26 +27,19 @@ class DestinationsActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val destinations = listOf(
-            Destination("1", "Kandy", "Fulltime", "20k-30k", "Colombo", R.drawable.kandy1),
-            Destination("2", "Matara", "Part time", "18k-35k", "Colombo", R.drawable.matara1),
-            Destination(
-                "3",
-                "Anuradhapura",
-                "Part time",
-                "8k-12k",
-                "Galle",
-                R.drawable.anuradapura3
-            ),
-            Destination("4", "Jaffna", "Fulltime", "10k-12k", "Matara", R.drawable.jaffna2),
-            Destination(
-                "5",
-                "NuwaraEliya",
-                "Fulltime",
-                "8k-13k",
-                "Kurunegala",
-                R.drawable.nuwaraeliya2
-            ),
-            Destination("6", "Colombo", "Fulltime", "8k-13k", "Kurunegala", R.drawable.colombo)
+            Destination("1", "Kandy", "Fulltime", "20k-30k", "Kandy", R.drawable.kandy1),
+            Destination("2", "Matara", "Part time", "18k-35k", "Matara", R.drawable.matara1),
+            Destination("3", "Anuradhapura", "Part time", "8k-12k", "Galle", R.drawable.anuradapura3),
+            Destination("4", "Jaffna", "Fulltime", "10k-12k", "Jaffna", R.drawable.jaffna2),
+            Destination("5", "NuwaraEliya", "Fulltime", "8k-13k", "NuwaraEliya", R.drawable.nuwaraeliya2),
+            Destination("6", "Colombo", "Fulltime", "8k-13k", "Colombo", R.drawable.colombo),
+            Destination("7", "Galle", "Fulltime", "8k-13k", "Galle", R.drawable.galle),
+            Destination("8", "Polonnaruwa", "Fulltime", "8k-13k", "Galle", R.drawable.galle),
+            Destination("9", "Matale", "Fulltime", "8k-13k", "Polonnaruwa", R.drawable.polonnaruwa),
+            Destination("10", "Kurunagala", "Fulltime", "8k-13k", "Kurunagala", R.drawable.sigiriya),
+            Destination("11", "Hambanthota", "Fulltime", "8k-13k", "Hambanthota", R.drawable.hambanthota)
+
+
         )
 
         // ✅ Initialize adapter first
