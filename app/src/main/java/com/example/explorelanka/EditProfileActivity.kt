@@ -5,10 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -30,9 +27,7 @@ class EditProfileActivity : AppCompatActivity() {
         editName = findViewById(R.id.editProfileName)
         btnSave = findViewById(R.id.btnSaveProfile)
 
-        // Pre-fill current name if passed from intent
-        val currentName = intent.getStringExtra("currentName")
-        editName.setText(currentName)
+        editName.setText(intent.getStringExtra("currentName"))
 
         profileImage.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
@@ -41,7 +36,6 @@ class EditProfileActivity : AppCompatActivity() {
 
         btnSave.setOnClickListener {
             val name = editName.text.toString().trim()
-
             if (name.isEmpty()) {
                 Toast.makeText(this, "Please enter your name", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -50,11 +44,8 @@ class EditProfileActivity : AppCompatActivity() {
             val uid = FirebaseAuth.getInstance().currentUser?.uid
             if (uid != null) {
                 val dbRef = FirebaseDatabase.getInstance().getReference("users").child(uid)
-                val updates = mutableMapOf<String, Any>()
-                updates["name"] = name
-                if (selectedImageUri != null) {
-                    updates["imageUri"] = selectedImageUri.toString()
-                }
+                val updates = mutableMapOf<String, Any>("name" to name)
+                selectedImageUri?.let { updates["imageUri"] = it.toString() }
 
                 dbRef.updateChildren(updates)
                     .addOnSuccessListener {
