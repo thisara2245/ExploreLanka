@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
 class DestinationAdapter(
+
+
     private val context: Context,
     private val destinationList: List<Destination>,
     private val onItemClick: (Destination) -> Unit
@@ -22,8 +24,7 @@ class DestinationAdapter(
     class DestinationViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val destinationIcon: ImageView = itemView.findViewById(R.id.destinationIcon)
         val destinationTitle: TextView = itemView.findViewById(R.id.destinationTitle)
-        val destinationType: TextView = itemView.findViewById(R.id.destinationType)
-        val destinationDescription: TextView = itemView.findViewById(R.id.destinationDescription)
+
         val destinationLocation: TextView = itemView.findViewById(R.id.destinationLocation)
         val bookmarkIcon: ImageView = itemView.findViewById(R.id.bookmarkIcon)
     }
@@ -39,8 +40,7 @@ class DestinationAdapter(
 
         holder.destinationIcon.setImageResource(destination.imageResId)
         holder.destinationTitle.text = destination.title
-        holder.destinationType.text = destination.type
-        holder.destinationDescription.text = destination.description
+
         holder.destinationLocation.text = destination.location
 
         val isFavorited = FavoriteManager.getFavorites().any { it.id == destination.id }

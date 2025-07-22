@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -21,7 +22,8 @@ class FavoriteFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_favourite, container, false)
 
         recyclerView = view.findViewById(R.id.recyclerFavorites)
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
+
 
         // Load favorites and set up adapter
         FavoriteManager.loadFavorites {

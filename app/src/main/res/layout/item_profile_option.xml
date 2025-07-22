@@ -33,7 +33,7 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_back"
+            android:src="@drawable/foward_button"
             android:tint="#999999" />
     </LinearLayout>
 
@@ -63,7 +63,7 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_back"
+            android:src="@drawable/foward_button"
             android:tint="#999"/>
 
     </LinearLayout>
@@ -95,7 +95,7 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_back"
+            android:src="@drawable/foward_button"
             android:tint="#999"/>
 
     </LinearLayout>
@@ -128,7 +128,7 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_back"
+            android:src="@drawable/foward_button"
             android:tint="#999"/>
     </LinearLayout>
 
@@ -160,7 +160,7 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_back"
-            android:tint="#D32F2F"/>
+            android:src="@drawable/foward_button"
+            android:tint="#D32F2F" />
     </LinearLayout>
 </LinearLayout>

@@ -5,14 +5,17 @@ import Attraction
 import Location
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 
 class LocationActivity : AppCompatActivity() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
 
         // Get destination name from intent
         val destinationName = intent.getStringExtra("destination_name")
@@ -125,6 +128,68 @@ class LocationActivity : AppCompatActivity() {
                 )
             )
 
+            "Kurunegala" -> Location(
+                name = "Kurunagala",
+                headerImageResId = R.drawable.kurunagala,
+                attractions = listOf(
+                    Attraction("Yapahuwa Rock Fortress", "Yapahuwa was a 13th-century capital of Sri Lanka, perched atop a 90-meter rock. It served as a military stronghold and briefly housed the Sacred Tooth Relic. The stone staircase and lion sculptures are notable features. The site offers stunning views and insight into medieval Sinhalese architecture and defense systems.", R.drawable.yapahuwa),
+                    Attraction("Ethugala", "Ethugala is a massive rock formation resembling an elephant, overlooking Kurunegala town. It's a popular viewpoint offering panoramic vistas of the city and surrounding landscape. A large Buddha statue atop the rock adds spiritual value, and the area is ideal for nature walks, meditation, and scenic photography.", R.drawable.ethugala),
+                    Attraction("Ridi Viharaya", "Located in Kurunegala District, Ridi Viharaya is an ancient cave temple dating back to the 2nd century BC. Built by King Dutugemunu, it features stunning frescoes, Buddha statues, and silver relics. It played a vital role in supplying silver for the Ruwanwelisaya construction in Anuradhapura.", R.drawable.ridi1),
+                    Attraction("Umandawa ", "Umandawa is a modern spiritual retreat founded by Ven. Siri Samanthabadra Thero. Located in Melsiripura, it's known for its serene environment, meditation spaces, and unique architecture combining traditional and modern elements. The site promotes mindfulness, self-discovery, and sustainable living through Buddhist teachings and eco-friendly practices.", R.drawable.umandawa),
+                    Attraction("Kurunegala Lake", "Kurunegala Lake, or “Kurunegala Wewa,” is a man-made reservoir built during ancient times to support agriculture. It serves as a peaceful recreational spot today, ideal for evening strolls and picnics. The lake enhances the town’s charm, reflecting surrounding hills like Ethugala and offering scenic beauty and relaxation", R.drawable.kurunagalalake),
+                    Attraction("Mahamevnawa Buddhist Monastery", "Mahamevnawa is a large network of Buddhist monasteries established in 1999 by Ven. Kiribathgoda Gnanananda Thero. The Kurunegala branch provides Dhamma education, meditation guidance, and a peaceful atmosphere for laypeople and monks. The monastery emphasizes pure Theravāda teachings and attracts local and international visitors seeking spiritual growth", R.drawable.mahamewunawa),
+                    Attraction("Padeniya Purana Rajamaha Viharaya", "This ancient temple near Wariyapola is believed to date back to the Anuradhapura period. It is renowned for its wooden carvings, traditional Kandyan architecture, and historical murals. Surrounded by greenery, Padeniya Rajamaha Viharaya remains an active place of worship and an excellent example of heritage preservation in Sri Lanka", R.drawable.padeniyapuranana),
+                    Attraction("Arankale Buddhist Monastery", "Arankale is an ancient forest monastery located near Kurunegala. Hidden in a tranquil forest, it was a meditation retreat for Buddhist monks in ancient times. Visitors can explore stone ruins, meditation paths, and natural beauty, offering a spiritual and historical journey into Sri Lanka’s monastic traditions and serene landscapes.", R.drawable.arankale)
+                )
+            )
+
+            "Polonnaruwa" -> Location(
+                name = "Polonnaruwa",
+                headerImageResId = R.drawable.polonnaruwa,
+                attractions = listOf(
+                    Attraction("Somawathi Raja Maha Viharaya", "Located within the Somawathiya National Park, this ancient stupa enshrines a sacred tooth relic of the Buddha. Built in the 2nd century BC by Prince Giri Abhaya, it remains an active pilgrimage site. Surrounded by lush forest, the temple offers spiritual serenity and a blend of faith and nature", R.drawable.somawathiyachaitya),
+                    Attraction("Polonnaruwa Vatadage", "The Polonnaruwa Vatadage is a circular relic house built during the reign of King Parakramabahu. It once protected a sacred tooth relic and is admired for its intricate stone carvings, guardstones, and Buddha statues. It represents classical Sinhalese architecture and stands as a symbol of Sri Lanka’s ancient craftsmanship.", R.drawable.p_vatadage),
+                    Attraction("Gal Viharaya", "Gal Viharaya is a stunning rock temple in Polonnaruwa featuring four colossal Buddha statues carved into granite. Created during King Parakramabahu’s reign, the statues depict seated, standing, and reclining postures. The site is renowned for its artistic excellence and spiritual ambiance, making it a key Buddhist heritage landmark", R.drawable.galviharaya),
+                    Attraction("Lankathilaka Viharaya ", "Lankathilaka Viharaya is a majestic image house built by King Parakramabahu I. It features massive brick walls and a towering standing Buddha statue. Though partially ruined, its architectural grandeur and intricate carvings reflect the brilliance of ancient Sri Lankan religious design and devotion to Theravāda Buddhism", R.drawable.polonnaruwalankathilaka),
+                    Attraction("Medirigiriya Vatadage", "Medirigiriya Vatadage is an elegant circular shrine built to enshrine a relic, likely a stupa. Surrounded by concentric stone pillars and located atop a scenic rock, it dates back to the Anuradhapura era. The peaceful surroundings and unique design make it a significant archaeological and spiritual attraction", R.drawable.medirigiriyavatadage),
+                    Attraction("Parakrama Samudraya", "This massive reservoir, built by King Parakramabahu I, reflects the ancient Sinhalese irrigation mastery. Known as the “Sea of Parakrama,” it was designed to ensure no drop of water wasted. It remains vital for agriculture in Polonnaruwa and is a symbol of sustainable ancient water management", R.drawable.parakkrama),
+                    Attraction("Thivanka Pilimage", "The Thivanka Pilimage, or “Thrice-Bent Image House,” features a unique statue of a Buddha with a thrice-bent posture. Located in Polonnaruwa, it also preserves exquisite frescoes illustrating Jataka tales. The shrine showcases exceptional artistic and spiritual heritage from Sri Lanka’s medieval period, emphasizing both architecture and storytelling", R.drawable.thivanka_pilimage),
+                    Attraction("Thuparama Gedige", "Thuparama Gedige is the best-preserved gedige-style shrine in Polonnaruwa. Built from stone, it blends South Indian and Sinhalese architectural elements. The shrine once housed a Buddha image and possibly relics. Its vaulted roof and robust design offer insights into unique construction methods during the Polonnaruwa Kingdom", R.drawable.thuparama_gedige)
+                )
+            )
+
+            "Jaffna" -> Location(
+                name = "Jaffna",
+                headerImageResId = R.drawable.jaffna2,
+                attractions = listOf(
+                    Attraction("Nallur Kovil", "Nallur Kandaswamy Kovil is a vibrant Hindu temple in Jaffna, dedicated to Lord Murugan. Originally built in 948 AD and rebuilt several times, it is famed for its golden gopuram, colorful rituals, and the grand Nallur Festival. The temple is a spiritual and cultural heart of Jaffna’s Tamil community", R.drawable.nallur),
+                    Attraction("Jaffna Fort", "Built by the Portuguese in 1618 and later expanded by the Dutch, Jaffna Fort is one of Sri Lanka’s largest colonial forts. Overlooking the lagoon, its ramparts and ruins echo a layered history of colonial rule, warfare, and resilience. The fort offers panoramic views and insight into northern heritage.", R.drawable.jaffna1),
+                    Attraction("Point Pedro", "Point Pedro marks the northernmost tip of Sri Lanka, offering unspoiled beaches and quiet charm. Known locally as “Sakkotai,” it’s a peaceful town with agricultural roots. The area features limestone cliffs, fishing villages, and the northern end of the iconic A9 road, making it geographically and symbolically significant", R.drawable.pointpedro),
+                    Attraction("Nagadeepa Purana Viharaya ", "Nagadeepa Purana Viharaya is one of the holiest Buddhist sites in Sri Lanka, located on Nainativu Island. According to legends, Lord Buddha visited here to resolve a dispute between two Naga kings. Today, devotees visit by boat to worship the serene stupa and relics in a tranquil island setting", R.drawable.nagadeepa),
+                    Attraction("Jaffna Public Library", "Built in 1933, the Jaffna Public Library once housed one of Asia’s best collections of Tamil literature. It was tragically burned in 1981, symbolizing cultural loss. Since its reconstruction, it stands as a powerful symbol of reconciliation, learning, and resilience, continuing to serve the intellectual community of the North", R.drawable.jaffna_public_library),
+                    Attraction("Elephant Pass", "Elephant Pass is a narrow strip of land linking the Jaffna Peninsula to mainland Sri Lanka. Strategically important, it played a major role during Sri Lanka’s civil war. Now peaceful, it features war memorials and salt pans, and symbolizes both division and connection in the country’s modern history", R.drawable.elephantpass),
+                    Attraction("Dambakola Patuna", "Dambakola Patuna is the historic port where Sangamitta Theri arrived from India with a sapling of the sacred Bodhi Tree. Located on the northern coast, the site now features a serene temple and stupa. It marks a key milestone in the spread of Buddhism to Sri Lanka over 2,000 years ago", R.drawable.dabakolapatuna)
+                )
+            )
+
+            "Matale" -> Location(
+                name = "Matale",
+                headerImageResId = R.drawable.sigiriya,
+                attractions = listOf(
+                    Attraction("Sigiriya", "Sigiriya, or Lion Rock, is a UNESCO World Heritage Site and ancient rock fortress built by King Kashyapa in the 5th century AD. Renowned for its frescoes, mirror wall, and lion-shaped gateway, it combines royal palace ruins, water gardens, and panoramic views, making it one of Sri Lanka’s iconic landmarks.", R.drawable.sigiriya),
+                    Attraction("Hulangala Mini Worlds End", "Hulangala Mini World’s End is a hidden gem near Balangoda, offering breathtaking views from a dramatic cliff drop, much like Horton Plains. Surrounded by tea estates and misty hills, it’s a quiet hiking spot ideal for nature lovers and photographers seeking a peaceful escape with stunning mountain scenery.", R.drawable.hulangala_mini_worlds_end),
+                    Attraction("Kalabokka 360 Degree Viewpoint", "Located near Kalugala, this viewpoint offers a full 360-degree panorama of surrounding mountain ranges, lush forests, and valleys. It’s an emerging hiking destination with minimal crowds. At the summit, you can witness sunrise or sunset with views stretching across the central highlands, making it a paradise for nature seekers." , R.drawable.kalabokka),
+                    Attraction("Aluvihare Rock Temple ", "Aluvihare Rock Temple, near Matale, is a sacred cave temple where the Pāli Tipitaka (Buddhist scriptures) was first written down in the 1st century BC. Nestled among rocky hills, it features ancient murals, cave shrines, and inscriptions, making it a significant site for Buddhist heritage and cultural history", R.drawable.aluvihare),
+                    Attraction("Nalanda Gedige", "Nalanda Gedige is a mysterious stone temple near Matale, blending Hindu and Buddhist architectural styles. Believed to be built between the 8th–10th centuries, it is precisely aligned to cardinal directions. This fusion of cultures, combined with intricate stonework and peaceful surroundings, makes it an intriguing archaeological site.", R.drawable.nalanda_gedige),
+                    Attraction("Pidurangala Rock", "Pidurangala Rock, located near Sigiriya, offers a rewarding hike with panoramic views of Sigiriya Rock and the surrounding jungle. It’s known for its sunrise vistas, ancient cave temple, and large reclining Buddha statue. Less crowded than Sigiriya, it combines history, spirituality, and adventure in one stunning natural setting", R.drawable.pidurangala),
+                    Attraction("Thelgamu Oya", "Thelgamu Oya is a pristine river flowing through the Knuckles Mountain Range. With crystal-clear water, natural pools, and surrounding forest, it’s ideal for bathing, picnicking, and eco-tourism. The river supports local biodiversity and offers a refreshing experience for those exploring Sri Lanka’s less-commercialized natural beauty spots.", R.drawable.thelgamuoya),
+                    Attraction("Bowatenna Reservoir", "Bowatenna Reservoir is a vital water body in the Matale District, created to support irrigation and hydroelectric power. Surrounded by green hills and farmland, it’s a peaceful retreat for fishing and scenic relaxation. The reservoir also plays an essential role in the country’s Mahaweli Development water management system.", R.drawable.bowa)
+                )
+            )
+
+
+
+
 
 
 
@@ -144,5 +209,7 @@ class LocationActivity : AppCompatActivity() {
         intent.putExtra("destination", location)
         startActivity(intent)
         finish() // Optional: close this activity
+
+
     }
 }

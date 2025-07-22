@@ -17,7 +17,7 @@ class OnboardingActivity2 : AppCompatActivity() {
         val button = findViewById<Button>(R.id.buttonGetStarted)
         button.setOnClickListener {
             // Navigate to main screen
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, DashboardActivity::class.java)
             startActivity(intent)
             finish()
         }
