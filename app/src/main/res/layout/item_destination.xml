@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:background="@drawable/job_item_background"
-    android:padding="16dp"
-    android:layout_marginBottom="12dp"
-    android:gravity="center_vertical">
-
-    <ImageView
-        android:id="@+id/destinationIcon"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@drawable/card_profile"
-        android:layout_marginEnd="16dp" />
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="16dp"
+    card_view:cardElevation="6dp">
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:orientation="vertical">
 
+        <!-- Image with Heart Icon Overlay -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+
+            <!-- Main Image -->
+            <ImageView
+                android:id="@+id/destinationIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/matara1" />
+
+            <!-- Bookmark Icon in Top-Right Corner -->
+            <ImageView
+                android:id="@+id/bookmarkIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="top|end"
+                android:layout_margin="8dp"
+                android:src="@drawable/icon_heart"
+                android:background="@drawable/white_circle_background"
+                android:padding="5dp" />
+        </FrameLayout>
+
+        <!-- Title -->
         <TextView
             android:id="@+id/destinationTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Project Manager"
-            android:textSize="18sp"
+            android:text="Matara"
+            android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="@android:color/black" />
+            android:textColor="#000000"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp" />
 
+        <!-- Location -->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="4dp">
+            android:padding="8dp"
+            android:gravity="center_vertical">
 
-            <TextView
-                android:id="@+id/destinationType"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="kandy"
-                android:textSize="12sp"
-                android:background="@drawable/job_type_background"
-                android:padding="4dp"
-                android:layout_marginEnd="8dp" />
-
-            <TextView
-                android:id="@+id/destinationDescription"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="20k-30k"
-                android:textSize="12sp"
-                android:background="@drawable/job_type_background"
-                android:padding="4dp"
-                android:layout_marginEnd="8dp" />
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@android:drawable/ic_menu_mylocation"
+                android:layout_marginEnd="4dp" />
 
             <TextView
                 android:id="@+id/destinationLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Colombo"
+                android:text="Tekerghat, Sunamganj"
                 android:textSize="12sp"
-                android:background="@drawable/job_type_background"
-                android:padding="4dp" />
+                android:textColor="#888888" />
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/bookmarkIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:src="@drawable/icon_heart" />
-
-</LinearLayout>
+</androidx.cardview.widget.CardView>
