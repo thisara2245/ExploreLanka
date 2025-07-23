@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Destination"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Name -->
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Destination Name" />
+
+        <!-- Latitude -->
+        <EditText
+            android:id="@+id/etLatitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Latitude"
+            android:inputType="numberDecimal" />
+
+        <!-- Longitude -->
+        <EditText
+            android:id="@+id/etLongitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Longitude"
+            android:inputType="numberDecimal" />
+
+        <!-- Food Cost -->
+        <EditText
+            android:id="@+id/etcostofonedayPerPerson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Food Cost Per Person (LKR)"
+            android:inputType="number" />
+
+
+        <!-- Description -->
+        <EditText
+            android:id="@+id/etimgUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Image Url" />
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+            android:minLines="3" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnSubmitDestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Destination"
+            android:layout_marginTop="24dp" />
+    </LinearLayout>
+</ScrollView>

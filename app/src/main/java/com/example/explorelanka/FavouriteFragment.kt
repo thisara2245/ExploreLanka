@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class FavoriteFragment : Fragment() {
@@ -22,19 +21,29 @@ class FavoriteFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_favourite, container, false)
 
         recyclerView = view.findViewById(R.id.recyclerFavorites)
-        recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
 
+        // Use safe context
+        val context = context ?: return view
 
-        // Load favorites and set up adapter
+        recyclerView.layoutManager = GridLayoutManager(context, 2)
+
+        // Load favorites and set up adapter safely
         FavoriteManager.loadFavorites {
+            // Ensure Fragment is still attached before updating UI
+            if (!isAdded) return@loadFavorites
+
+            val safeContext = context ?: return@loadFavorites
             val favorites = FavoriteManager.getFavorites()
-            adapter = DestinationAdapter(requireContext(), favorites) { selectedDestination ->
-                val intent = Intent(requireContext(), LocationDetailsActivity::class.java)
-                intent.putExtra("title", selectedDestination.title)
-                intent.putExtra("imageResId", selectedDestination.imageResId)
-                intent.putExtra("description", "This is a favorite destination.")
+
+            adapter = DestinationAdapter(safeContext, favorites) { selectedDestination ->
+                val intent = Intent(safeContext, LocationDetailsActivity::class.java).apply {
+                    putExtra("title", selectedDestination.title)
+                    putExtra("imageResId", selectedDestination.imageResId)
+                    putExtra("description", "This is a favorite destination.")
+                }
                 startActivity(intent)
             }
+
             recyclerView.adapter = adapter
         }
 

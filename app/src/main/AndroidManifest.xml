@@ -46,6 +46,10 @@
         <activity android:name=".EditProfileActivity" />
         <activity android:name=".LocationActivity" />
         <activity android:name=".LocationDetailsActivity" />
+        <activity android:name=".FilteringActivity" />
+        <activity android:name=".ResultActivity" />
+        <activity android:name=".admin.AddDestinationActivity" />
+
 
 
 
