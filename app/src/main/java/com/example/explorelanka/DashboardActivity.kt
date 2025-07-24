@@ -1,22 +1,18 @@
 package com.example.explorelanka
 
-
-
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class DashboardActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_dashboard)
-        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigation)
-        replaceFragment(HomeFragment())
+
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
+        replaceFragment(HomeFragment()) // Load default fragment
 
         bottomNav.setOnItemSelectedListener {
             when (it.itemId) {
@@ -36,8 +32,6 @@ class DashboardActivity : AppCompatActivity() {
                     replaceFragment(TripPlannerFragment())
                     true
                 }
-
-
                 else -> false
             }
         }
@@ -45,7 +39,7 @@ class DashboardActivity : AppCompatActivity() {
 
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainer, fragment)
+            .replace(R.id.nav_host_fragment, fragment)
             .commit()
     }
 }

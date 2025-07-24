@@ -46,14 +46,21 @@
         <activity android:name=".EditProfileActivity" />
         <activity android:name=".LocationActivity" />
         <activity android:name=".LocationDetailsActivity" />
-        <activity android:name=".FilteringActivity" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".admin.AddDestinationActivity" />
+        <activity android:name=".MapPickerActivity" />
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCfa1teyDsBj9Vk9GfI--sXXXx64ueZ1oE"/>
+
 
 
 
 
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

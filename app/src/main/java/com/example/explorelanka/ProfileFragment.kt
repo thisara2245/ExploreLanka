@@ -5,6 +5,8 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.*
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
@@ -49,7 +51,23 @@ class ProfileFragment : Fragment() {
         }
 
         setOptionClick(view, R.id.optionSettings, "Settings clicked")
-        setOptionClick(view, R.id.optionPreferences, "Preferences clicked")
+        view.findViewById<View>(R.id.optionPreferences)?.setOnClickListener {
+            val options = arrayOf("Light Mode", "Dark Mode")
+            val currentMode = AppCompatDelegate.getDefaultNightMode()
+            val checkedItem = if (currentMode == AppCompatDelegate.MODE_NIGHT_YES) 1 else 0
+
+            AlertDialog.Builder(requireContext())
+                .setTitle("Choose Theme")
+                .setSingleChoiceItems(options, checkedItem) { dialog, which ->
+                    when (which) {
+                        0 -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                        1 -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                    }
+                    dialog.dismiss()
+                }
+                .setNegativeButton("Cancel", null)
+                .show()
+        }
 
         return view
     }

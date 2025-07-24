@@ -3,107 +3,225 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="#F5F5F5">
+    android:background="@drawable/bg_gradient">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="20dp"
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            card_view:cardCornerRadius="16dp"
-            card_view:cardElevation="6dp">
+            android:layout_marginBottom="32dp"
+            card_view:cardCornerRadius="24dp"
+            card_view:cardElevation="10dp"
+            card_view:cardBackgroundColor="#FFFFFF">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="24dp"
+                android:gravity="center_horizontal">
 
+                <!-- App Title -->
                 <TextView
                     android:id="@+id/textView2"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:textSize="13dp"/>
+                    android:textSize="13sp"
+                    android:visibility="gone"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:gravity="clip_horizontal|center_horizontal"
                     android:text="Trip Planner"
-                    android:textSize="24sp"
+                    android:textSize="28sp"
                     android:textStyle="bold"
-                    android:layout_gravity="center"/>
 
+                    android:layout_marginBottom="18dp"
+                    android:letterSpacing="0.06"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <!-- Start Location -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Start Location"
                     android:textStyle="bold"
                     android:textSize="16sp"
-                    android:layout_marginBottom="4dp" />
+                    android:layout_marginBottom="4dp"/>
 
-                <Spinner
-                    android:id="@+id/spinnerStartLocation"
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="35dp" />
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/bg_field"
+                    android:gravity="center_vertical"
+                    android:padding="2dp">
 
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_mylocation"
+                        android:layout_marginLeft="8dp"
+                        android:tint="@color/blue"/>
+
+                    <TextView
+                        android:id="@+id/textViewSelectedLocation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Select Start Location"
+                        android:textSize="16sp"
+                        android:padding="10dp"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:textColor="#444"/>
+
+                    <Button
+                        android:id="@+id/buttonPickOnMap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="Pick on Map"
+                        android:textAllCaps="false"
+                        android:textColor="#3445B4"
+                        android:backgroundTint="#E3EAFD"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:elevation="2dp"/>
+                </LinearLayout>
+
+                <!-- Travel Mode -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Travel Mode"
                     android:textStyle="bold"
                     android:textSize="16sp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="4dp" />
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="4dp"
+                    />
 
                 <Spinner
                     android:id="@+id/spinnerTravelMode"
                     android:layout_width="match_parent"
-                    android:layout_height="41dp" />
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_field"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:theme="@style/Widget.Material3.Spinner"/>
 
-                <EditText
-                    android:id="@+id/editTextMembers"
+                <!-- Members -->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Number of Members"
-                    android:inputType="number"
-                    android:layout_marginTop="16dp"
-                    android:backgroundTint="#CCCCCC"/>
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_field"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp">
 
-                <EditText
-                    android:id="@+id/editTextDays"
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_myplaces"
+                        android:layout_marginLeft="8dp"
+                        card_view:tint="@color/blue" />
+
+                    <EditText
+                        android:id="@+id/editTextMembers"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:hint="Number of Members"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:textColor="#222"
+                        />
+                </LinearLayout>
+
+                <!-- Days -->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Number of Days"
-                    android:inputType="number"
-                    android:layout_marginTop="16dp"
-                    android:backgroundTint="#CCCCCC"/>
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_field"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
 
-                <EditText
-                    android:id="@+id/editTextBudget"
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_week"
+                        android:layout_marginLeft="8dp"
+                        card_view:tint="@color/blue" />
+
+                    <EditText
+                        android:id="@+id/editTextDays"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:hint="Number of Days"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:textColor="#222"
+                        />
+                </LinearLayout>
+
+                <!-- Budget -->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Total Budget (LKR)"
-                    android:inputType="numberDecimal"
-                    android:layout_marginTop="16dp"
-                    android:backgroundTint="#CCCCCC"/>
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_field"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
 
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_manage"
+                        android:layout_marginLeft="8dp"
+                        card_view:tint="@color/blue" />
+
+                    <EditText
+                        android:id="@+id/editTextBudget"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:hint="Total Budget (LKR)"
+                        android:inputType="numberDecimal"
+                        android:padding="10dp"
+                        android:textColor="#222"
+                        />
+                </LinearLayout>
+
+                <!-- Find Button -->
                 <Button
                     android:id="@+id/buttonFind"
-                    android:layout_width="match_parent"
+                    android:layout_width="225dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="@color/blue"
+                    android:elevation="4dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="14dp"
                     android:text="Find Destinations"
                     android:textAllCaps="false"
-                    android:layout_marginTop="24dp"
-                    android:backgroundTint="@color/blue"
                     android:textColor="#FFFFFF"
-                    android:padding="12dp"/>
+                    android:textSize="18sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
