@@ -62,6 +62,9 @@ dependencies {
     implementation(libs.googleid)
     implementation("com.github.bumptech.glide:glide:4.16.0")
     implementation(libs.firebase.firestore.ktx)
+    implementation ("com.google.android.gms:play-services-maps:18.2.0")
+    implementation ("com.google.android.material:material:1.11.0")
+
     kapt("com.github.bumptech.glide:compiler:4.16.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

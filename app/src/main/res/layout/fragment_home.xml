@@ -72,6 +72,8 @@
     </LinearLayout>
 
     <!-- Explore Title Section -->
+
+
     <TextView
         android:id="@+id/tvExploreTitle1"
         android:layout_width="0dp"
@@ -107,46 +109,12 @@
 
     <!-- Horizontal ScrollView for Destination Cards -->
 
-    <LinearLayout
-        android:id="@+id/search_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="2dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/search_background"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="12dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvExploreTitle2">
-
-        <ImageView
-            android:id="@+id/searchIcon"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="-1dp"
-            android:layout_marginEnd="12dp"
-            android:src="@drawable/search_icon" />
-
-        <EditText
-            android:id="@+id/searchEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:hint="Search Destinations..."
-            android:textColorHint="@color/gray_text"
-            android:textSize="16sp" />
-
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/bestDestinationHeader"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="28dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingStart="16dp"
@@ -199,10 +167,11 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <!-- Destination Card 1 (Example) -->
+            <!-- Destination Card 1  -->
             <androidx.cardview.widget.CardView
+
+                android:id="@+id/cardkandy"
                 android:layout_width="220dp"
-                android:id="@+id/kandy"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:clickable="true"
@@ -212,15 +181,14 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="351dp">
 
                     <!-- Bookmark Icon -->
 
                     <ImageView
                         android:id="@+id/destinationImage1"
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:layout_marginTop="36dp"
+                        android:layout_width="235dp"
+                        android:layout_height="247dp"
                         android:contentDescription="Destination Image"
                         android:scaleType="centerCrop"
                         android:src="@drawable/kandy1"
@@ -232,72 +200,72 @@
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@drawable/ic_bookmark"
-                        android:contentDescription="Bookmark"
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="12dp"
-                        app:layout_constraintTop_toTopOf="@id/destinationImage1"
+                        android:contentDescription="Bookmark"
+                        android:src="@drawable/ic_bookmark"
                         app:layout_constraintEnd_toEndOf="@id/destinationImage1"
+                        app:layout_constraintTop_toTopOf="@id/destinationImage1"
                         app:tint="@android:color/white" />
 
                     <TextView
                         android:id="@+id/destinationName1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
                         android:text="Kandy"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"
                         android:textStyle="bold"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginStart="12dp"
-                        app:layout_constraintTop_toBottomOf="@id/destinationImage1"
+                        app:layout_constraintEnd_toStartOf="@+id/ratingLayout1"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/ratingLayout1" />
+                        app:layout_constraintTop_toBottomOf="@id/destinationImage1" />
 
                     <LinearLayout
                         android:id="@+id/ratingLayout1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
                         android:layout_marginEnd="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@+id/destinationName1"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/destinationName1"
-                        app:layout_constraintBottom_toBottomOf="@+id/destinationName1">
+                        app:layout_constraintTop_toTopOf="@+id/destinationName1">
 
                         <ImageView
                             android:layout_width="16dp"
                             android:layout_height="16dp"
-                            android:src="@drawable/ic_star"
                             android:contentDescription="Star Rating"
+                            android:src="@drawable/ic_star"
                             app:tint="#FFC107" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
                             android:text="4.7"
                             android:textColor="#616161"
-                            android:textSize="14sp"
-                            android:layout_marginStart="4dp" />
+                            android:textSize="14sp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/locationLayout1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:layout_marginTop="4dp"
                         android:layout_marginStart="12dp"
-                        app:layout_constraintTop_toBottomOf="@id/destinationName1"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent">
+                        app:layout_constraintTop_toBottomOf="@id/destinationName1">
 
                         <ImageView
                             android:layout_width="16dp"
                             android:layout_height="16dp"
-                            android:src="@drawable/ic_location"
                             android:contentDescription="Location Icon"
+                            android:src="@drawable/ic_location"
                             app:tint="#888888" />
 
                         <TextView
@@ -313,52 +281,53 @@
                         android:id="@+id/avatarsLayout1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:layout_marginTop="8dp"
                         android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
                         android:layout_marginBottom="12dp"
-                        app:layout_constraintTop_toBottomOf="@id/locationLayout1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent">
+                        app:layout_constraintTop_toBottomOf="@id/locationLayout1">
 
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/onboarding1"
                             android:scaleType="centerCrop"
+                            android:src="@drawable/nelligala"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
 
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/onboarding2"
-                            android:scaleType="centerCrop"
                             android:layout_marginStart="-8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/kandyviewpoint"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
 
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/onboarding1"
-                            android:scaleType="centerCrop"
                             android:layout_marginStart="-8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ambulu"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
                             android:text="+50"
                             android:textColor="#888888"
-                            android:textSize="12sp"
-                            android:layout_marginStart="8dp" />
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Destination Card 2 (Placeholder - You can duplicate and modify) -->
+            <!-- Destination Card 2  -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardNuwaraEliya"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
@@ -368,92 +337,91 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="351dp">
 
                     <!-- Bookmark Icon -->
 
                     <ImageView
                         android:id="@+id/destinationImage2"
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:layout_marginTop="36dp"
+                        android:layout_width="235dp"
+                        android:layout_height="247dp"
                         android:contentDescription="Destination Image"
                         android:scaleType="centerCrop"
                         android:src="@drawable/nuwaraeliya2"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"/>
 
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:src="@drawable/ic_bookmark"
-                        android:contentDescription="Bookmark"
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="12dp"
-                        app:layout_constraintTop_toTopOf="@id/destinationImage2"
+                        android:contentDescription="Bookmark"
+                        android:src="@drawable/ic_bookmark"
                         app:layout_constraintEnd_toEndOf="@id/destinationImage2"
+                        app:layout_constraintTop_toTopOf="@id/destinationImage2"
                         app:tint="@android:color/white" />
 
                     <TextView
                         android:id="@+id/destinationName2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
                         android:text="Nuwara Eliya"
                         android:textColor="@android:color/black"
                         android:textSize="16sp"
                         android:textStyle="bold"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginStart="12dp"
-                        app:layout_constraintTop_toBottomOf="@id/destinationImage2"
+                        app:layout_constraintEnd_toStartOf="@+id/ratingLayout2"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/ratingLayout2" />
+                        app:layout_constraintTop_toBottomOf="@id/destinationImage2" />
 
                     <LinearLayout
                         android:id="@+id/ratingLayout2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
                         android:layout_marginEnd="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@+id/destinationName2"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/destinationName2"
-                        app:layout_constraintBottom_toBottomOf="@+id/destinationName2">
+                        app:layout_constraintTop_toTopOf="@+id/destinationName2">
 
                         <ImageView
                             android:layout_width="16dp"
                             android:layout_height="16dp"
-                            android:src="@drawable/ic_star"
                             android:contentDescription="Star Rating"
+                            android:src="@drawable/ic_star"
                             app:tint="#FFC107" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
                             android:text="4.5"
                             android:textColor="#616161"
-                            android:textSize="14sp"
-                            android:layout_marginStart="4dp" />
+                            android:textSize="14sp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/locationLayout2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:layout_marginTop="4dp"
                         android:layout_marginStart="12dp"
-                        app:layout_constraintTop_toBottomOf="@id/destinationName2"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent">
+                        app:layout_constraintTop_toBottomOf="@id/destinationName2">
 
                         <ImageView
                             android:layout_width="16dp"
                             android:layout_height="16dp"
-                            android:src="@drawable/ic_location"
                             android:contentDescription="Location Icon"
+                            android:src="@drawable/ic_location"
                             app:tint="#888888" />
 
                         <TextView
@@ -469,43 +437,44 @@
                         android:id="@+id/avatarsLayout2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:layout_marginTop="8dp"
                         android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
                         android:layout_marginBottom="12dp"
-                        app:layout_constraintTop_toBottomOf="@id/locationLayout2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent">
+                        app:layout_constraintTop_toBottomOf="@id/locationLayout2">
 
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/onboarding1"
                             android:scaleType="centerCrop"
+                            android:src="@drawable/onboarding1"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
 
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/onboarding2"
-                            android:scaleType="centerCrop"
                             android:layout_marginStart="-8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/onboarding2"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
                             android:text="+20"
                             android:textColor="#888888"
-                            android:textSize="12sp"
-                            android:layout_marginStart="8dp" />
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardAnuradhapura"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
@@ -515,20 +484,19 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="351dp">
 
                     <!-- Bookmark Icon -->
 
                     <ImageView
                         android:id="@+id/destinationImage3"
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:layout_marginTop="24dp"
+                        android:layout_width="235dp"
+                        android:layout_height="247dp"
                         android:contentDescription="Destination Image"
                         android:scaleType="centerCrop"
                         android:src="@drawable/anuradapura3"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -661,6 +629,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardColombo"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
@@ -670,20 +639,20 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="351dp">
 
                     <!-- Bookmark Icon -->
 
                     <ImageView
+
                         android:id="@+id/destinationImage4"
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:layout_marginTop="24dp"
+                        android:layout_width="235dp"
+                        android:layout_height="247dp"
                         android:contentDescription="Destination Image"
                         android:scaleType="centerCrop"
                         android:src="@drawable/colombo"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -816,6 +785,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardJaffna"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
@@ -825,20 +795,19 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="351dp">
 
                     <!-- Bookmark Icon -->
 
                     <ImageView
                         android:id="@+id/destinationImage5"
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:layout_marginTop="24dp"
+                        android:layout_width="235dp"
+                        android:layout_height="247dp"
                         android:contentDescription="Destination Image"
                         android:scaleType="centerCrop"
                         android:src="@drawable/jaffna2"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
