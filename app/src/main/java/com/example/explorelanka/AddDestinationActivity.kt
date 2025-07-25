@@ -1,10 +1,9 @@
-package com.example.explorelanka.admin
+package com.example.explorelanka
 
 
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.example.explorelanka.R
 import com.google.firebase.database.FirebaseDatabase
 
 class AddDestinationActivity : AppCompatActivity() {

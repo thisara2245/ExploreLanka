@@ -74,7 +74,9 @@ dependencies {
 
 
     implementation("io.coil-kt:coil:2.4.0")
-    
+
+
+
     implementation(libs.firebase.crashlytics.buildtools)
 
 

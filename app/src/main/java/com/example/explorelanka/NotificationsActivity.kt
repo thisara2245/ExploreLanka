@@ -13,7 +13,7 @@ class NotificationsActivity : AppCompatActivity() {
     private lateinit var backButton: ImageButton
     private lateinit var notificationAdapter: NotificationAdapter
     private val notificationList = listOf(
-        NotificationItem("Trip booked successfully!", "July 11, 2025"),
+        NotificationItem("Chatbox Feature is now your app", "July 11, 2025"),
         NotificationItem("Your profile was updated.", "July 10, 2025"),
         NotificationItem("New destination added near you!", "July 9, 2025")
     )

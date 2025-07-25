@@ -37,6 +37,7 @@
                 android:paddingEnd="12dp">
 
                 <ImageView
+                    android:id="@+id/proimg"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@drawable/thisara"
@@ -197,16 +198,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginEnd="12dp"
-                        android:contentDescription="Bookmark"
-                        android:src="@drawable/ic_bookmark"
-                        app:layout_constraintEnd_toEndOf="@id/destinationImage1"
-                        app:layout_constraintTop_toTopOf="@id/destinationImage1"
-                        app:tint="@android:color/white" />
+
 
                     <TextView
                         android:id="@+id/destinationName1"
@@ -353,16 +345,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"/>
 
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginEnd="12dp"
-                        android:contentDescription="Bookmark"
-                        android:src="@drawable/ic_bookmark"
-                        app:layout_constraintEnd_toEndOf="@id/destinationImage2"
-                        app:layout_constraintTop_toTopOf="@id/destinationImage2"
-                        app:tint="@android:color/white" />
+
 
                     <TextView
                         android:id="@+id/destinationName2"
@@ -450,7 +433,7 @@
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/onboarding1"
+                            android:src="@drawable/nuwaraeliyapostoffice"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
 
                         <com.google.android.material.imageview.ShapeableImageView
@@ -458,7 +441,7 @@
                             android:layout_height="24dp"
                             android:layout_marginStart="-8dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/onboarding2"
+                            android:src="@drawable/strawberry"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
 
                         <TextView
@@ -486,7 +469,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="351dp">
 
-                    <!-- Bookmark Icon -->
+
 
                     <ImageView
                         android:id="@+id/destinationImage3"
@@ -500,16 +483,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_bookmark"
-                        android:contentDescription="Bookmark"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginEnd="12dp"
-                        app:layout_constraintTop_toTopOf="@id/destinationImage3"
-                        app:layout_constraintEnd_toEndOf="@id/destinationImage3"
-                        app:tint="@android:color/white" />
+
 
                     <TextView
                         android:id="@+id/destinationName3"
@@ -596,14 +570,14 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/onboarding1"
+                            android:src="@drawable/thuparamaya"
                             android:scaleType="centerCrop"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
 
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/onboarding2"
+                            android:src="@drawable/samadhi"
                             android:scaleType="centerCrop"
                             android:layout_marginStart="-8dp"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
@@ -611,7 +585,7 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/onboarding1"
+                            android:src="@drawable/wilpattu"
                             android:scaleType="centerCrop"
                             android:layout_marginStart="-8dp"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
@@ -641,7 +615,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="351dp">
 
-                    <!-- Bookmark Icon -->
+
 
                     <ImageView
 
@@ -656,16 +630,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_bookmark"
-                        android:contentDescription="Bookmark"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginEnd="12dp"
-                        app:layout_constraintTop_toTopOf="@id/destinationImage4"
-                        app:layout_constraintEnd_toEndOf="@id/destinationImage4"
-                        app:tint="@android:color/white" />
+
 
                     <TextView
                         android:id="@+id/destinationName4"
@@ -752,14 +717,14 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/onboarding1"
+                            android:src="@drawable/kelaniya"
                             android:scaleType="centerCrop"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
 
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/onboarding2"
+                            android:src="@drawable/portcity"
                             android:scaleType="centerCrop"
                             android:layout_marginStart="-8dp"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
@@ -767,7 +732,7 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/onboarding1"
+                            android:src="@drawable/gangaramaya"
                             android:scaleType="centerCrop"
                             android:layout_marginStart="-8dp"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
@@ -797,7 +762,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="351dp">
 
-                    <!-- Bookmark Icon -->
+
 
                     <ImageView
                         android:id="@+id/destinationImage5"
@@ -811,16 +776,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_bookmark"
-                        android:contentDescription="Bookmark"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginEnd="12dp"
-                        app:layout_constraintTop_toTopOf="@id/destinationImage5"
-                        app:layout_constraintEnd_toEndOf="@id/destinationImage5"
-                        app:tint="@android:color/white" />
+
 
                     <TextView
                         android:id="@+id/destinationName5"
@@ -907,14 +863,14 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/onboarding1"
+                            android:src="@drawable/nallur"
                             android:scaleType="centerCrop"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
 
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/onboarding2"
+                            android:src="@drawable/elephantpass"
                             android:scaleType="centerCrop"
                             android:layout_marginStart="-8dp"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
@@ -922,7 +878,7 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/onboarding1"
+                            android:src="@drawable/jaffna_public_library"
                             android:scaleType="centerCrop"
                             android:layout_marginStart="-8dp"
                             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
@@ -938,9 +894,34 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
-            <!-- Add more cards here if needed -->
+
         </LinearLayout>
     </HorizontalScrollView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Your main UI goes here -->
+        <!-- Example: -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!-- Add your existing content here -->
+        </LinearLayout>
+
+        <!-- Custom Chatbot Button (Bottom Right) -->
+        <ImageView
+            android:id="@+id/chatBotButton"
+            android:layout_width="369dp"
+            android:layout_height="99dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:background="@drawable/circlebackground"
+            android:elevation="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/userimg2" />
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

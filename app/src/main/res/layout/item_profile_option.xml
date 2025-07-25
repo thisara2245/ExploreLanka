@@ -18,8 +18,8 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_lock"
-            android:tint="#2D675B"/>
+            android:src="@drawable/edit_profile"
+            android:tint="#324187"/>
 
 
         <TextView
@@ -50,7 +50,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_lock"
-            android:tint="#2D675B"/>
+            android:tint="#324187"/>
 
         <TextView
             android:layout_width="0dp"
@@ -81,8 +81,8 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/icon_heart"
-            android:tint="#2D675B"/>
+            android:src="@drawable/settings"
+            android:tint="#324187"/>
 
         <TextView
             android:layout_width="0dp"
@@ -114,8 +114,8 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/icon_heart"
-            android:tint="#2D675B"/>
+            android:src="@drawable/night_mode"
+            android:tint="#324187"/>
 
         <TextView
             android:layout_width="0dp"
@@ -145,7 +145,7 @@
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/icon_heart"
+            android:src="@drawable/exit"
             android:tint="#D32F2F"/>
 
         <TextView
