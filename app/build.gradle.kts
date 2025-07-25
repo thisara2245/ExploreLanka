@@ -65,6 +65,19 @@ dependencies {
     implementation ("com.google.android.gms:play-services-maps:18.2.0")
     implementation ("com.google.android.material:material:1.11.0")
 
+    implementation("io.github.jan-tennert.supabase:storage-kt:2.0.0")
+    implementation("io.github.jan-tennert.supabase:realtime-kt:2.0.0")
+    implementation("io.ktor:ktor-client-android:2.3.7")
+    implementation("io.ktor:ktor-client-core:2.3.7")
+    implementation("io.ktor:ktor-utils:2.3.7")
+
+
+
+    implementation("io.coil-kt:coil:2.4.0")
+    
+    implementation(libs.firebase.crashlytics.buildtools)
+
+
     kapt("com.github.bumptech.glide:compiler:4.16.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

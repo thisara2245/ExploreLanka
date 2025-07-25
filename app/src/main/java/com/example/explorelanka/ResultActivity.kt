@@ -2,6 +2,7 @@ package com.example.explorelanka
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,6 +12,7 @@ class ResultActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: DestinationsAdapter
+    private lateinit var backButton: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,5 +35,12 @@ class ResultActivity : AppCompatActivity() {
         } else {
             Toast.makeText(this, "No destinations to show", Toast.LENGTH_SHORT).show()
         }
+        // Back Button
+        backButton = findViewById(R.id.btnBack1)
+
+        backButton.setOnClickListener {
+            finish()  // or navigate to previous activity
+        }
+        }
     }
-}
+
