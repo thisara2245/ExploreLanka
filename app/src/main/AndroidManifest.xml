@@ -47,8 +47,9 @@
         <activity android:name=".LocationActivity" />
         <activity android:name=".LocationDetailsActivity" />
         <activity android:name=".ResultActivity" />
-        <activity android:name=".admin.AddDestinationActivity" />
+        <activity android:name=".AddDestinationActivity" />
         <activity android:name=".MapPickerActivity" />
+        <activity android:name=".ChatActivity" />
 
 
         <meta-data

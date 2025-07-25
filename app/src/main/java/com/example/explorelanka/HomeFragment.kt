@@ -7,6 +7,7 @@ import android.view.*
 import android.widget.*
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
+import coil.load
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
@@ -15,8 +16,13 @@ class HomeFragment : Fragment() {
     private lateinit var homeUserNameText: TextView
     private lateinit var databaseRef: DatabaseReference
     private lateinit var auth: FirebaseAuth
+    private lateinit var proimg: ImageView
+
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
 
 
         super.onCreate(savedInstanceState)
@@ -29,11 +35,14 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
+
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
         homeUserNameText = view.findViewById(R.id.homeUserName)
+        proimg = view.findViewById(R.id.proimg)
 
-        fetchUserName()
 
         view.findViewById<TextView>(R.id.viewall).setOnClickListener {
             startActivity(Intent(requireContext(), DestinationsActivity::class.java))
@@ -60,7 +69,15 @@ class HomeFragment : Fragment() {
             openLocation("Jaffna")
         }
 
+        val chatBotButton = view.findViewById<ImageView>(R.id.chatBotButton)
+        chatBotButton.setOnClickListener {
+            val intent = Intent(requireContext(), ChatActivity::class.java)
+            startActivity(intent)
+        }
+
         return view
+
+
     }
 
     private fun openLocation(destinationName: String) {
@@ -71,28 +88,31 @@ class HomeFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        fetchUserName()
+
+        fetchUserProfile()
     }
 
-    private fun fetchUserName() {
-        val uid = auth.currentUser?.uid
-        if (uid == null) {
-            Toast.makeText(requireContext(), "User not logged in", Toast.LENGTH_SHORT).show()
-            return
-        }
 
-        databaseRef.child(uid).child("name")
-            .addListenerForSingleValueEvent(object : ValueEventListener {
-                override fun onDataChange(snapshot: DataSnapshot) {
-                    val name = snapshot.getValue(String::class.java)
-                    homeUserNameText.text = name ?: "User"
-                    Log.d("HomeFragment", "Fetched name: $name")
-                }
+    private fun fetchUserProfile() {
+        val uid = auth.currentUser?.uid ?: return
 
-                override fun onCancelled(error: DatabaseError) {
-                    Toast.makeText(requireContext(), "Failed to load name", Toast.LENGTH_SHORT).show()
-                    Log.e("HomeFragment", "Firebase error: ${error.message}")
+        databaseRef.child(uid).addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val name = snapshot.child("name").getValue(String::class.java)
+                val imageUrl = snapshot.child("profileImageUrl").getValue(String::class.java)
+
+                homeUserNameText.text = name ?: "User"
+
+                if (!imageUrl.isNullOrEmpty()) {
+                    proimg.load(imageUrl)
+                } else {
+                    proimg.setImageResource(R.drawable.thisara)
                 }
-            })
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(requireContext(), "Failed to load profile", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 }
