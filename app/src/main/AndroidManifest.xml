@@ -55,6 +55,8 @@
         <activity android:name=".LocationDetailsActivity" />
 
         <activity android:name=".ActivityGMap"/>
+        <activity android:name=".ChatActivity" />
+
 
 
         <meta-data
