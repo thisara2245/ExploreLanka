@@ -42,9 +42,11 @@ class TripPlannerFragment : Fragment() {
         findButton = view.findViewById(R.id.buttonFind)
         databaseReference = FirebaseDatabase.getInstance().getReference("destinations")
 
-        // Setup spinner adapter (if not already)
+
         val modes = arrayOf("Car", "Bus", "Train", "Van")
-        spinnerTravelMode.adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_dropdown_item, modes)
+        val adapter = ArrayAdapter(requireActivity(), android.R.layout.simple_spinner_item, modes)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerTravelMode.adapter = adapter
 
         buttonPickOnMap.setOnClickListener {
             val intent = Intent(requireContext(), MapPickerActivity::class.java)

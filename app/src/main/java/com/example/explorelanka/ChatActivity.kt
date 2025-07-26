@@ -1,5 +1,6 @@
 package com.example.explorelanka
 
+import android.content.Intent
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.view.Gravity
@@ -16,12 +17,15 @@ class ChatActivity : AppCompatActivity() {
     private lateinit var chatbotName: TextView
     private lateinit var onlineStatusDot: View
     private lateinit var onlineStatusText: TextView
+    private lateinit var backButton: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat)
 
 
+
+        backButton = findViewById(R.id.btnBack1)
         chatLayout = findViewById(R.id.chatLayout)
         messageInput = findViewById(R.id.messageInput)
         sendButton = findViewById(R.id.sendButton)
@@ -44,6 +48,13 @@ class ChatActivity : AppCompatActivity() {
                 messageInput.text.clear()
             }
         }
+        backButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("navigate_to", "home")
+            startActivity(intent)
+            finish()
+        }
+
     }
 
     private fun respondToMessage(message: String) {
@@ -130,4 +141,5 @@ class ChatActivity : AppCompatActivity() {
             bg.setColor(android.graphics.Color.parseColor(colorHex))
         }
     }
+
 }

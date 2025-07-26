@@ -14,7 +14,8 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             card_view:cardCornerRadius="24dp"
             card_view:cardElevation="10dp"
             card_view:cardBackgroundColor="#FFFFFF">
@@ -26,7 +27,7 @@
                 android:padding="24dp"
                 android:gravity="center_horizontal">
 
-                <!-- App Title -->
+
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
@@ -46,7 +47,7 @@
                     android:letterSpacing="0.06"
                     android:fontFamily="sans-serif-medium"/>
 
-                <!-- Start Location -->
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -98,7 +99,7 @@
                         android:textColor="#3445B4" />
                 </LinearLayout>
 
-                <!-- Travel Mode -->
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -113,13 +114,13 @@
                     android:id="@+id/spinnerTravelMode"
                     android:layout_width="match_parent"
                     android:layout_height="44dp"
-                    android:background="@drawable/bg_field"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:layout_marginBottom="8dp"
-                    android:theme="@style/Widget.Material3.Spinner"/>
+                    android:theme="@style/ThemeOverlay.AppCompat.Light"/>
 
-                <!-- Members -->
+
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

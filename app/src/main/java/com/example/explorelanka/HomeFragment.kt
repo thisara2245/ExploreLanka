@@ -69,8 +69,9 @@ class HomeFragment : Fragment() {
             openLocation("Jaffna")
         }
 
-        val chatBotButton = view.findViewById<ImageView>(R.id.chatBotButton)
-        chatBotButton.setOnClickListener {
+        val chatBotCard = view.findViewById<CardView>(R.id.chatBotCard)
+
+        chatBotCard.setOnClickListener {
             val intent = Intent(requireContext(), ChatActivity::class.java)
             startActivity(intent)
         }
@@ -106,7 +107,7 @@ class HomeFragment : Fragment() {
                 if (!imageUrl.isNullOrEmpty()) {
                     proimg.load(imageUrl)
                 } else {
-                    proimg.setImageResource(R.drawable.thisara)
+                    proimg.setImageResource(R.drawable.usercrop)
                 }
             }
 
