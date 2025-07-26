@@ -93,7 +93,7 @@ class ProfileFragment : Fragment() {
                 if (!imageUrl.isNullOrEmpty()) {
                     imageProfile.load(imageUrl)
                 } else {
-                    imageProfile.setImageResource(R.drawable.thisara)
+                    imageProfile.setImageResource(R.drawable.usercrop)
                 }
             }
 
